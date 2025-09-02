@@ -497,7 +497,9 @@ export class HolyTime {
       year: date.getFullYear(),
     };
 
-    return unit === 'object' ? object : (object[unit as GetUnit] as any);
+    return unit === 'object'
+      ? (object as any)
+      : (object[unit as GetUnit] as any);
   }
 
   // TODO: rename type?
