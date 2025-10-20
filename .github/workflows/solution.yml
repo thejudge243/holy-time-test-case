@@ -23,6 +23,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "yarn"
+      - name: Install Yarn
+        run: npm install --global yarn
+      - name: Install all dependencies
+        run: yarn install --frozen-lockfile --immutable
       - name: Run Vitest Unit Tests
         run: yarn test
