@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "yarn"
+          cache : 'yarn'
       - name: Run Vitest Unit Tests
         run: yarn test
