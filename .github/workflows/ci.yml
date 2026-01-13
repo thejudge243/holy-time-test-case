@@ -25,4 +25,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache : 'yarn'
       - name: Run Vitest Unit Tests
-        run: yarn test
+        run: yarn tests
